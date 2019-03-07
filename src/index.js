@@ -12,11 +12,22 @@ ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.unregister();
 
 class DogeMeme extends React.Component{
+
+	constructor(props){
+		super(props);
+		this.top = {value: 'EASY PEASY'};
+		this.bottom = {value: 'LEMON SQUEEZY'};	
+	}
+	
+
 	render(){
 		return(
-			<div className="doge">
-				<h1 className="top">EASY PEASY</h1>
-				<h1 className="bottom">LEMON SQUEEZY</h1>
+			<div id="main">
+				Top: <input type="text" placeholder="Top" onChange={(msg) => this.top.value = msg}/> Bottom: <input type="text" placeholder="Bottom"/>
+				<div className="doge">
+					<h1 className="top">{this.top.value}</h1>
+					<h1 className="bottom">{this.bottom.value}</h1>
+				</div>
 			</div>
 		);
 	}
