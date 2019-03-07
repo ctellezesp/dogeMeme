@@ -15,18 +15,30 @@ class DogeMeme extends React.Component{
 
 	constructor(props){
 		super(props);
-		this.top = {value: 'EASY PEASY'};
-		this.bottom = {value: 'LEMON SQUEEZY'};	
+		this.state = {top: 'EASY PEASY', bottom: 'LEMON SQUEEZY'}
+		this.changeTop = this.changeTop.bind(this);
+		this.changeBottom = this.changeBottom.bind(this);
 	}
+
+	changeTop(event){
+		this.setState({top: event.target.value});
+	}
+
+	changeBottom(event){
+		this.setState({bottom: event.target.value});
+	}
+
+
+
 	
 
 	render(){
 		return(
 			<div id="main">
-				Top: <input type="text" placeholder="Top" onChange={(msg) => this.top.value = msg}/> Bottom: <input type="text" placeholder="Bottom"/>
+				Top: <input type="text" placeholder="Top" value={this.state.top} onChange={this.changeTop}/> Bottom: <input type="text" placeholder="Bottom" value={this.state.bottom} onChange={this.changeBottom}/>
 				<div className="doge">
-					<h1 className="top">{this.top.value}</h1>
-					<h1 className="bottom">{this.bottom.value}</h1>
+					<h1 className="top">{this.state.top}</h1>
+					<h1 className="bottom">{this.state.bottom}</h1>
 				</div>
 			</div>
 		);
