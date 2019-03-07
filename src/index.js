@@ -10,3 +10,19 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+class DogeMeme extends React.Component{
+	render(){
+		return(
+			<div className="doge">
+				<h1 className="top">EASY PEASY</h1>
+				<h1 className="bottom">BRO!</h1>
+			</div>
+		);
+	}
+}
+
+ReactDOM.render(
+  <DogeMeme />,
+  document.getElementById('root')
+);

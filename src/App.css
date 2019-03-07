@@ -31,3 +31,15 @@
     transform: rotate(360deg);
   }
 }
+
+.doge{
+  background: url(https://yt3.ggpht.com/a-/AAuE7mD6DYZhbyoY6NJ2eV-lkxkG3KEgAfD8uC2f4w=s900-mo-c-c0xffffffff-rj-k-no) no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.top{
+  width: 100%;
+}
